@@ -2,16 +2,18 @@ const URIParser = require('urijs');
 
 // normalizes passed options and constants into themeOptions object
 const prepareThemeOptions = options => {
+  options.wordPressUrl = 'http://s246879907.onlinehome.us/';
+  options.menuLocation = 'PRIMARY';
   // constants
   const wpqlTypeName = 'WPGraphQL';
   // no trailing slash please
   // not used
-  const blogPath = '/blog';
+  const blogPath = '/';
 
   // posts index page size
   const indexPageSize = 4;
   // static images
-  const homepageHeroImage = 'builtin/homepage-hero.jpg';
+  const homepageHeroImage = 'builtin/bg.jpg';
   const bioAvatarImage = 'builtin/bio-avatar.jpg';
 
   const processPostTypes = options.processPostTypes || ['Page', 'Post'];
